@@ -186,7 +186,6 @@ class Table
 		if @InnerTable.is_a? Roo::Excelx
 			book = RubyXL::Workbook.new
 			row_count_raw.times { |r| col_count.times do |c|
-				formula =
 				book[0].add_cell(r + @InnerTable.first_row - 1, c + @InnerTable.first_column - 1, formula_raw(r, c) ? cell_raw(r, c) : '', formula_raw(r, c))
 			end }
 		else
